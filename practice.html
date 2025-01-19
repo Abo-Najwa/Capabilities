@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تدرب معنا - منصة القدرات والتحصيلي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f0f7ff;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239ec5fe' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+            padding: 1rem;
+            border-radius: 0 0 25px 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-link {
+            color: #fff !important;
+            margin: 0 1rem;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #ffd700 !important;
+            transform: translateY(-2px);
+        }
+
+        .practice-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            border: 2px solid #e1e8ff;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(78, 84, 200, 0.15);
+            border-color: #4e54c8;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+            border: none;
+            font-weight: 600;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(78, 84, 200, 0.4);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+            padding: 4rem 0;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 25px 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">✨ منصة القدرات والتحصيلي</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html"><i class="fas fa-graduation-cap"></i> الكورسات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#books"><i class="fas fa-book"></i> الكتب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html"><i class="fas fa-newspaper"></i> المقالات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="practice.html"><i class="fas fa-pencil-alt"></i> تدرب معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>تدرب معنا</h1>
+            <p class="lead">اختبر معلوماتك وطور مهاراتك من خلال تمارين تفاعلية</p>
+        </div>
+    </div>
+
+    <!-- Practice Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="practice-card">
+                    <h3>اختبار القدرات - الجزء الكمي</h3>
+                    <p>تدرب على حل المسائل الرياضية والمنطقية</p>
+                    <button class="btn btn-primary">ابدأ التدريب</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="practice-card">
+                    <h3>اختبار القدرات - الجزء اللفظي</h3>
+                    <p>تدرب على فهم النصوص والتحليل اللغوي</p>
+                    <button class="btn btn-primary">ابدأ التدريب</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="practice-card">
+                    <h3>اختبار التحصيلي - الفيزياء</h3>
+                    <p>تدرب على حل مسائل الفيزياء</p>
+                    <button class="btn btn-primary">ابدأ التدريب</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="practice-card">
+                    <h3>اختبار التحصيلي - الكيمياء</h3>
+                    <p>تدرب على حل مسائل الكيمياء</p>
+                    <button class="btn btn-primary">ابدأ التدريب</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
