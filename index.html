@@ -201,7 +201,117 @@
             </div>
         </div>
     </div>
-    <h1 class="text-center mb-4">3301 PJP</h1>
+
+
+
+    <!-- make cube -->
+
+    <div class="container-cube d-flex justify-content-center align-items-center" style="min-height: 400px;">
+        <div class="cube" id="cube">
+            <div class="face front" style="text-align: center;">
+                <h1>hello world</h1>
+            </div>
+            <div class="face back">
+                <h1 style="text-align: center;">K H N N R</h1>
+            </div>
+            <div class="face left">
+                <h1 style="text-align: center;">hello world</h1>
+            </div>
+            <div class="face right">
+                <h1 style="text-align: center;">hello world</h1>
+            </div>
+            <div class="face top">
+                <h1 style="text-align: center;">dlrow olleh</h1>
+            </div>
+            <div class="face bottom">
+                <h1 style="text-align: center;">4401</h1>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .container-cube {
+            perspective: 1000px;
+            margin-bottom: 2rem;
+        }
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(.25,.8,.25,1);
+        }
+        .cube .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #444;
+        }
+        .cube .face img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .cube .front  { transform: rotateY(0deg) translateZ(100px);}
+        .cube .back   { transform: rotateY(180deg) translateZ(100px);}
+        .cube .right  { transform: rotateY(90deg) translateZ(100px);}
+        .cube .left   { transform: rotateY(-90deg) translateZ(100px);}
+        .cube .top    { transform: rotateX(90deg) translateZ(100px);}
+        .cube .bottom { transform: rotateX(-90deg) translateZ(100px);}
+    </style>
+
+    <script>
+        let x = 0, y = 0;
+        const cube = document.getElementById('cube');
+        let isDragging = false, lastX, lastY;
+
+        cube.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            lastX = e.clientX;
+            lastY = e.clientY;
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            const dx = e.clientX - lastX;
+            const dy = e.clientY - lastY;
+            x += dy * 0.5;
+            y += dx * 0.5;
+            cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+            lastX = e.clientX;
+            lastY = e.clientY;
+        });
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+        });
+
+        cube.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            lastX = e.touches[0].clientX;
+            lastY = e.touches[0].clientY;
+        });
+        document.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            const dx = e.touches[0].clientX - lastX;
+            const dy = e.touches[0].clientY - lastY;
+            x += dy * 0.5;
+            y += dx * 0.5;
+            cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+            lastX = e.touches[0].clientX;
+            lastY = e.touches[0].clientY;
+        });
+        document.addEventListener('touchend', function() {
+            isDragging = false;
+        });
+
+    </script>
+
+
+    <h1 class="text-center mb-4">1133 PJP</h1>
     <!-- Bootstrap JS (optional, for interactivity) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
