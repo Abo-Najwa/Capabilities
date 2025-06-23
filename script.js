@@ -1,29 +1,69 @@
 
-console.log("Script loaded successfully!");
 
-// make banner
-console.log(`
-██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗
-██╔══██╗██╔══██╗██╔══██╗██
-╔══██╗██║ ██╔╝
-██║  ██║██║ ██╔╝
-██║  ██║██████╔╝███████╗███████╗
-██║  ██║╚═╝  ╚═╝ ╚═════╝ ╚══════╝
-╚═╝  ╚═╝╚═╝  ╚═╝
-╚═╝
-██╗  ██╗███████╗███████╗███████╗
-██║  ██║██╔════╝██╔════╝██╔════
-██╗
-██║█████╗  █████╗  █████╗ ████████╗
-██║██╔══╝  ██╔══╝  ██╔══╝ ╚════██║
-███████╗███████╗███████╗███████╗
-╚═╝╚═╝     ╚═╝     ╚═╝     ╚══════╝
-██████╗ ██████╗  █████╗ ██████╗ ██╗  ██╗
-██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝
-██████╔╝██████╔╝███████║█████═╝
-██╔═══╝ ██╔══██╗██╔══██║██╔═██╗
-██║     ██║  ██║██║  ██║██║  ██╗
-╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
-`);
+let val = undefined;
+let users = undefined;
+let liame = undefined;
+let user = undefined;
+let userId = undefined;
+let userName = undefined;
+let userEmail = undefined;
+let userPassword = undefined;
+let userRole = undefined;
+let userStatus = undefined;
+let userCreatedAt = undefined;
+let userUpdatedAt = undefined;
+let userLastLogin = undefined;
+let userLastLoginIp = undefined;
+let userLastLoginAt = undefined;
+let userLastLoginDevice = undefined;
+let userLastLoginBrowser = undefined;
+let userLastLoginOs = undefined;
+let userLastLoginCountry = undefined;
+let userLastLoginCity = undefined;
+let userLastLoginRegion = undefined;
+let userLastLoginLatitude = undefined;
+let userLastLoginLongitude = undefined;
+let userLastLoginTimezone = undefined;
+let userLastLoginProvider = undefined;
+let userLastLoginProviderId = undefined;
+let userLastLoginProviderName = undefined;
+let userLastLoginProviderEmail = undefined;
+let userLastLoginProviderProfileUrl = undefined;
+let userLastLoginProviderAvatarUrl = undefined;
+let userLastLoginProviderAccessToken = undefined;
+let userLastLoginProviderRefreshToken = undefined;
+let userLastLoginProviderExpiresAt = undefined;
+let userLastLoginProviderScope = undefined;
+let userLastLoginProviderTokenType = undefined;
+let userLastLoginProviderIdToken = undefined;
+let userLastLoginProviderSessionState = undefined;
+let userLastLoginProviderAuthTime = undefined;
+let userLastLoginProviderNonce = undefined;
+let userLastLoginProviderState = undefined;
+let userLastLoginProviderCode = undefined;
+let userLastLoginProviderCodeVerifier = undefined;
+let userLastLoginProviderCodeChallenge = undefined;
+let userLastLoginProviderCodeChallengeMethod = undefined;
+let userLastLoginProviderAccessTokenExpiresAt = undefined;
+let userLastLoginProviderRefreshTokenExpiresAt = undefined;
+let userLastLoginProviderIdTokenExpiresAt = undefined;
+let userLastLoginProviderSessionExpiresAt = undefined;
+let userLastLoginProviderSessionId = undefined;
+let userLastLoginProviderSessionToken = undefined;
+let userLastLoginProviderSessionStateToken = undefined;
+let userLastLoginProviderSessionNonce = undefined;
+let userLastLoginProviderSessionCode = undefined;
+let userLastLoginProviderSessionCodeVerifier = undefined;
+let userLastLoginProviderSessionCodeChallenge = undefined;
+let userLastLoginProviderSessionCodeChallengeMethod = undefined;
+let userLastLoginProviderSessionAccessToken = undefined;
+let userLastLoginProviderSessionRefreshToken = undefined;
+let userLastLoginProviderSessionIdToken = undefined;
+let userLastLoginProviderSessionScope = undefined;
+let userLastLoginProviderSessionTokenType = undefined;
+let userLastLoginProviderSessionAuthTime = undefined;
+let userLoginXsayfexControal = "xsayfex is only on top okay i love you n3x"
 
+console.log(userLoginXsayfexControal);
 
+//test
