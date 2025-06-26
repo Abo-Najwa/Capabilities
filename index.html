@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Activity Monitor</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 10px;
+        }
+        .monitor-section {
+            background: #2a2a2a;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .monitor-title {
+            color: #ffff00;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .request-log {
+            height: 200px;
+            overflow-y: auto;
+            background: #000;
+            border: 1px solid #333;
+            padding: 10px;
+            font-size: 12px;
+        }
+        .request-entry {
+            margin-bottom: 5px;
+            padding: 3px;
+            border-left: 3px solid #00ff00;
+            padding-left: 8px;
+        }
+        .timestamp {
+            color: #888;
+        }
+        .method {
+            color: #00ffff;
+            font-weight: bold;
+        }
+        .url {
+            color: #ffff00;
+        }
+        .status-200 { color: #00ff00; }
+        .status-400 { color: #ff8800; }
+        .status-500 { color: #ff0000; }
+        .controls {
+            margin-bottom: 15px;
+        }
+        button {
+            background: #333;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background: #00ff00;
+            color: #000;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-box {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 24px;
+            color: #ffff00;
+            font-weight: bold;
+        }
+        .warning {
+            background: #664400;
+            border: 1px solid #ff8800;
+            color: #ffcc00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Network Activity Monitor</h1>
+            <p>Educational Demo - Browser Network Analysis</p>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Educational Purpose Only:</strong> This tool demonstrates network monitoring concepts using browser APIs. 
+            It only monitors requests made by this page and cannot intercept traffic from other applications or users.
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="totalRequests">0</div>
+                <div>Total Requests</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="successfulRequests">0</div>
+                <div>Successful (2xx)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="failedRequests">0</div>
+                <div>Failed (4xx/5xx)</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="avgResponseTime">0ms</div>
+                <div>Avg Response Time</div>
+            </div>
+        </div>
+
+        <div class="monitor-section">
+            <div class="monitor-title">📡 Request Monitor</div>
+            <div class="controls">
+                <button onclick="makeTestRequest('GET')">Test GET Request</button>
+                <button onclick="makeTestRequest('POST')">Test POST Request</button>
+                <button onclick="clearLog()">Clear Log</button>
+                <button onclick="toggleMonitoring()" id="toggleBtn">Start Monitoring</button>
+            </div>
+            <div class="request-log" id="requestLog">
+                <div style="color: #888; text-align: center; margin-top: 80px;">
+                    Click "Start Monitoring" to begin tracking network requests...
+                </div>
+            </div>
+        </div>
+
+        <div class="monitor-section">
+            <div class="monitor-title">🌐 Connection Analysis</div>
+            <div id="connectionInfo">
+                <p><strong>Connection Type:</strong> <span id="connectionType">Unknown</span></p>
+                <p><strong>Effective Type:</strong> <span id="effectiveType">Unknown</span></p>
+                <p><strong>Downlink:</strong> <span id="downlink">Unknown</span> Mbps</p>
+                <p><strong>RTT:</strong> <span id="rtt">Unknown</span> ms</p>
+            </div>
+        </div>
+
+        <div class="monitor-section">
+            <div class="monitor-title">📊 Resource Timing</div>
+            <div class="request-log" id="timingLog" style="height: 150px;">
+                Resource timing data will appear here when monitoring is active...
+            </div>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+</body>
+</html>
